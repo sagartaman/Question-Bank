@@ -1,0 +1,10 @@
+
+.navbar{
+    height: 4rem !important;
+}
+
+
+.show-btns{
+    display: flex !important;
+    margin-top: 3rem !important;
+}

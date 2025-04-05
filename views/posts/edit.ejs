@@ -1,0 +1,36 @@
+<% layout('./layouts/boilerplate.ejs') -%>
+<body>
+  <div class="row mt-2">
+    <div class="col-9 offset-2">
+      <h3 class="text-success text-center mt-2">Edit Your post</h3>
+      <form action="/posts/<%=post._id%>/?_method=PUT" method="post">
+        <div class="mb-2">
+          <label for="topic" class="form-label">Topic</label>
+          <input
+            type="text"
+            name="post[topic]"
+            id="topic"
+            value="<%= post.topic%>"
+            class="form-control"
+          />
+        </div>
+
+        <div class="mb-2">
+          <label for="question" class="form-label">Question</label>
+          <textarea name="post[question]" id="question" class="form-control">
+<%= post.question%></textarea
+          >
+        </div>
+
+        <div class="mb-2">
+          <label for="answer" class="form-label">Answer</label>
+          <textarea name="post[answer]" id="answer" rows="7" class="form-control">
+<%= post.answer%></textarea
+          >
+        </div>
+
+        <button class="btn btn-primary mb-2">edit post</button>
+      </form>
+    </div>
+  </div>
+</body>
