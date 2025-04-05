@@ -16,7 +16,8 @@ const postRouter = require("./routes/post.route.js");
 const userRouter= require("./routes/user.route.js");
 
 // Database connection
-const MONGO_URl = process.env.MONGO_URL;
+// const MONGO_URl = process.env.MONGO_URL;
+const ATLAS_DB=process.env.ATLAS_DB;
 
 main()
   .then(() => {
@@ -27,7 +28,7 @@ main()
   });
 
 async function main() {
-  await mongoose.connect(MONGO_URl);
+  await mongoose.connect(ATLAS_DB);
 }
 
 // middlewares
